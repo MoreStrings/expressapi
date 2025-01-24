@@ -1,4 +1,5 @@
 import express from "express"
+import router from "./routes/routes.js"
 
 const app = express()
 const port = 3005
@@ -9,9 +10,7 @@ app.get("/",(req, res) => {
     res.end("Hello World from node backend.")
 })
 
-app.post("/test", (req, res) => {
-    res.end("Post request accepted from test")
-})
+app.use("/api",router)
 
 app.listen(port, (error) => {
     if(error){
