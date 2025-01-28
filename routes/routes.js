@@ -12,4 +12,4 @@ router.get("/test", (req, res) => {
 router.use("/auth",authRoute)
 router.use("/student", studentRoute)
 
-export default router
+export default router 
